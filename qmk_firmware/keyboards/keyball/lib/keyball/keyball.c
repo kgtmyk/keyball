@@ -495,7 +495,7 @@ void keyball_oled_render_layerinfo(void) {
     }
     oled_write_char(' ', false);
 
-#    ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
     oled_write_P(PSTR("\xC2\xC3"), false);
     if (get_auto_mouse_enable()) {
         oled_write_P(LFSTR_ON, false);
@@ -505,9 +505,9 @@ void keyball_oled_render_layerinfo(void) {
 
     oled_write(format_4d(get_auto_mouse_timeout() / 10) + 1, false);
     oled_write_char('0', false);
-#    else
+#else
     oled_write_P(PSTR("\xC2\xC3\xB4\xB5 ---"), false);
-#    endif
+#endif
 #endif
 }
 
