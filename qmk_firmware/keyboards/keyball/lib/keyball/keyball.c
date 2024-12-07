@@ -544,7 +544,9 @@ uint8_t keyball_get_scroll_div(void) {
 }
 
 void keyball_set_scroll_div(uint8_t div) {
-    keyball.scroll_div = div > SCROLL_DIV_MAX ? SCROLL_DIV_MAX : div;
+//    keyball.scroll_div = div > SCROLL_DIV_MAX ? SCROLL_DIV_MAX : div;
+    keyball.scroll_div = SCROLL_DIV_MAX;
+     
 }
 
 uint8_t keyball_get_cpi(void) {
